@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>携程</title>
+</head>
+<body>
+    <div class="box1">
+        <div>
+            <div style="background: url(1/image/123/44.jpg.jpg)">
+                    <div><br>三亚<hr>￥<span style="color: orangered;font-size: 19px">921</span>/人起</div>
+                <div></div>
+            </div>
+            <div style="background: url(1/image/123/22.jpg.jpg)">
+                    <div><br>普吉岛<hr>￥<span style="color: orangered;">2030</span>/人起</div>
+                <div></div>
+            </div>
+        </div>
+        <div>
+            <div style="background: url(1/image/123/33.jpg.jpg)">
+                    <div><br>北京<hr>￥<span style="color: orangered;">1296</span>/人起</div>
+                <div></div>
+            </div>
+            <div style="background: url(1/image/123/77.jpg.jpg)">
+                    <div><br>莫斯科<hr>￥<span style="color: orangered;">4499</span>/人起</div>
+                <div></div>
+            </div>
+        </div>
+        <div>
+            <div style="background: url(1/image/123/11.jpg.jpg)">
+                    <div><br>香港<hr>￥<span style="color: orangered;">835</span>/人起</div>
+                <div></div>
+            </div>
+            <div style="background: url(1/image/123/88.jpg.jpg)">
+                    <div><br>塞班岛<hr>￥<span style="color: orangered;">2980</span>/人起</div>
+                <div></div>
+            </div>
+        </div>
+        <div>
+            <div style="background: url(1/image/123/66.jpg.jpg)">
+                    <div><br>大阪<hr>￥<span style="color: orangered;">2489</span>/人起</div>
+                <div></div>
+            </div>
+            <div style="background: url(1/image/123/55.jpg.jpg)">
+                    <div><br>迪拜<hr>￥<span style="color: orangered;">4849</span>/人起</div>
+                <div></div>
+            </div>
+        </div>
+        <div><img style="height: 344px" src="1/image/123/99.jpg.jpg"></div>
+    </div>
+</body>
+<style>
+
+    .box1{
+        width: 1100px;
+        height: 370px;
+        border: 2px solid darkgray;
+        margin: 10% auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-content: space-evenly;
+    }
+    .box1>div{
+        width: 200px;
+        height: 368px;
+        border: 1px solid #000 ;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-content: space-evenly;
+        border: none;
+    }
+    .box1>div>div{
+        width: 200px;
+        height: 164px;
+        border: 1px solid #000;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .box1>div>div>div:nth-child(1){
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        font-size: 18px;
+        font-weight: bold;
+        color: mintcream;
+        text-align: center;
+        background-color: rgba(64,64,64,0.5);
+        display: block;
+        /*opacity: 0.5;*/
+        /*background-color: dimgrey;*/
+    }
+    .box1>div>div>div:nth-child(2){
+        width: 200px;
+        height: 164px;
+        background-color: #646464;
+        opacity: 0;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        display: none;
+        z-index: -1111;
+    }
+    .box1>div>div:hover>div:nth-child(2){
+        opacity: 0.8;
+        z-index: 99999;
+        display: block;
+    }
+    .box1>div>div:hover>div:nth-child(1){
+        display: none;
+    }
+    img{
+        width: 200px;
+        height: 164px;
+    }
+</style>
+</html>

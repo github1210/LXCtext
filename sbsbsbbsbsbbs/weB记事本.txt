@@ -1,0 +1,79 @@
+web代码
+ animation: ren 5s linear infinite; 动画持续时间 5S 平滑过渡 无限循环
+ @keyframes ren {
+        0%{
+            transform: rotate(-60deg);
+        }
+        100%{
+            transform: rotate(60deg);
+        }
+    }
+
+  width: 1000px;宽
+  height: 800px;高
+           定位
+position: absolute 绝对定位  relative相对定位  static默认定位  fixed固定定位（相对于浏览器)
+z-index（）可以定位显示图层顺序
+border-radius：50%  圆形
+hover触碰
+transform: rotate(-60deg) 旋转
+transform-origin: 50% 50% 旋转点
+       边框属性
+border边框  top上left左 bottom下 right右
+border:1px solid #000;实线边框
+margin：20px 距离20px
+padding：50px 内边框
+box-sizing：content-box;默认值，标准盒子的宽高此时定义的宽高是描述的宽高
+            border-box 此时定义的是实际宽高
+       图形切割
+clip-path: polygon（20% 0,80% 0,100% 100%,0 100%）多边形定点
+clip-path:circle(50% at 50% 100%);圆形裁剪，at后面跟圆心
+      文字属性
+outline：20px solid red；轮廓线 
+font-size：20px；字体大小
+font-weight：bold；字体加粗效果（100的倍数 最大900bold 字体加粗效果 700
+font-style:italic 字体倾斜效果
+font-family：楷书；字体样式     
+ position: relative; /*隐藏不保留物理空间*/
+ display: hidden; /*隐藏保留物理空间*/
+     flex布局
+display: flex; 设置flex布局 
+flex-direction: row;设置主轴方向从左到右 row（默认值）：主轴为水平方向，起点在左端。
+row-reverse：主轴为水平方向，起点在右端。column：主轴为垂直方向，起点在上沿。column-reverse：主轴为垂直方向，起点在下沿。
+
+flex-wrap:nowrap;设置项目是否换行
+justify-content: flex-start;主轴方向上的对其方式
+justify-content: space-evenly 项目两边到边界的距离等于项目间距
+justify-content: space-around 项目两边的距离等于项目间距的一半
+justify-content: space-between;项目两边靠两边，项目间距均等
+align-items:stretch; 交叉轴方向的对其方式   默认值，stretch占满父容器
+align-content: space-evenly;多条轴线时，交叉轴对齐方式，
+order：-1；设置项目的排列顺序，默认值0，越小越靠前
+flex-grow:1:设置放大比例
+flex-shrink：1：设置缩小比例
+
+
+cursor:pointer:/**鼠标手型**/
+text-align:left;/**文本方式左对齐**/
+font-size: em 相对长度单位/**默认情况下 1em = 16px 当改变父容器单位时 子容器em单位也发生改变*/
+font-size: rem/*root是根的意思 ， 以根元素（html标签）为相对*/
+font-size：2vw/*view width 1vw是视窗的百分之一 1vh是视窗高度的百分之一*/
+white-space:nowrap;/*段落文本不换行*/
+滤镜
+filter: blur(10px);/*高斯模糊*/
+filter: brightness(10%)/*默认值100% 0-100%暗度 100%以上亮度*/
+filter：contrast;/*默认值100% 对比度*/
+filter: drop-shadow: 1px 1px 1px black；/*图像阴影*/
+filter: grayscale(20%);/*灰度 默认0 取值0-100%*/
+filter: hue-rotate(30deg)/*色相旋转*/
+filter: invert(20%);/*图像翻转*/
+filter: opacity(20%);/*图像透明度 取值0-100%*/
+filter: saturate(20%);/*图像饱和度 0-正无穷*/
+filter: sepia;/*褐度 0-100%*/
+opacity: 0.5;/*页面透明度*/
+text-shadow: 1px 1px 1px black；/*文字阴影 值1水平位移 .2垂直位移 .3阴影模糊值 .4阴影颜色值*/
+box-shadow: 1px 1px 1px black； /*盒子阴影 同上 .3为外延值*/
+
+
+
+

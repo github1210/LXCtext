@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			body {
+				position: relative;
+			}
+
+			.redBok {
+				background-color: red;
+			}
+
+			.greenBak {
+				background-color: aqua;
+			}
+
+			.countdown {
+				position: absolute;
+				width: 400px;
+				height: 400px;
+				top: 300px;
+				left: 30%;
+				background: #e6e6e6;
+				border: 1px solid #FF0000;
+				border-radius: 50%;
+				font-size: 30px;
+				text-align: center;
+			}
+
+			.countdown div {
+				margin-top: 40%;
+			}
+
+			.sa {
+				width: 600px;
+				height: 200px;
+				position: fixed;
+				top: 0;
+				left: 50%;
+				margin-left: -300PX;
+				background-color: chocolate;
+				padding-top: 20px;
+				padding-left: 20px;
+			}
+
+			.aa {
+				width: 140px;
+				height: 140px;
+				border: 1px solid black;
+				border-radius: 50%;
+				font-size: 24px;
+				margin-left: 40px;
+				display: inline-block;
+
+			}
+
+			.greenBak {
+				background-color: green;
+			}
+
+			.redBak {
+				background-color: red;
+			}
+			body img{
+				filter:grayscale(100%);
+			}
+		</style>
+	</head>
+	<body onload="loadDo()">
+		<!-- 		<p class="p1" id="line1">你是一个大笨逼</p>
+		<p class="p1" id="line2">你从来就是逼</p> -->
+		<div class="sa">
+			<input class="aa greenBak" type="button" id="bt1" value="开始倒计时" />
+			<input class="aa" type="button" id="bt2" value="改变灰度" />
+			<input class="aa" type="button" id="bt3" value="待定" />
+		</div>
+		<div class="countdown" id="countdown1">
+			<div id="countNum">5</div>
+		</div>
+		<img src="img/12.jpg" alt="" style="margin: 600px auto;">
+	</body>
+	<script>
+		//***********************************************************
+		function loadDo() {
+			document.getElementById("countdown1").style.display = "none";
+
+		}
+		document.getElementById("bt1").onclick = function(e) {
+			if (document.getElementById("bt1").getAttribute("class").indexOf("greenBak") >= 0) {
+				document.getElementById("bt1").setAttribute("class", "aa redBak");
+				doCountDown();
+			} else {
+				console.info("去去去");
+			}
+		}
+		// document.getElementById("line2"); //查找
+		// var lin1 = document.getElementById("line1");
+		// line1.innerText = "风萧萧兮易水寒";
+		// document.getElementById("line2").innerHTML = "去<br>去<br>去<br>个<br>大<br>黑<br>憋";
+		// document.getElementsByTagName("p");
+
+		//倒数的画面 句柄
+		function doCountDown() {
+			document.getElementById("countdown1").style.display = "block";
+			var counter01 = 5;
+			var kkk = setInterval(function() {
+				document.getElementById("countNum").style.display = "none";
+				counter01 -= 1;
+				if (counter01 >= 0) {
+					document.getElementById("countNum").innerText = counter01;
+				} else {
+					//倒数结束之后做的事情,清空计时器
+					document.getElementById("countNum").innerText = "开始";
+					document.getElementById("bt1").setAttribute("class", "aa greenBak");
+					clearInterval(kkk); //关闭定时器
+				}
+
+				setTimeout(function() {
+					document.getElementById("countNum").style.display = "block"
+				}, 600); //600毫秒之后再执行匿名函数
+			}, 1000);
+		}
+
+		// document.images 取到了页面上所有图片
+		// document.images[0].style.filter = "grayscale(100%)"
+
+		//var imges = [];
+		//imges = document.images;
+		//for(var i=0;i<imges.length;i++){
+		//imges[i].style.filter="grayscale(100%)"
+		//}
+
+		// for (var i = 0; i < document.images.length; i++) {
+		// 	document.images[i].style.filter = "grayscale(50%)";
+		// }
+
+
+		//  作业 : 实现点击按钮后, 图片逐渐变亮
+		// step1 . 修改样式, 让图片的 grayscale css属性 为 100% 
+		// step2 . 修改以下函数 , 让灰度逐渐变成 0% 
+		document.getElementById("bt2").onclick = function() {
+			offLight();
+		}
+
+		function offLight(){
+		var cpounter002 = 10;
+		var timerForImg = setInterval(function() {
+			if (cpounter002 >= 1) {
+				for (var i = 0; i < document.images.length; i++) {
+					document.images[i].style.filter = "grayscale(" + cpounter002 + "0%)";
+				}
+				cpounter002 -= 1;
+			} else {
+				clearInterval(timerForImg);
+			}
+		}, 400);
+	}
+	</script>
+</html>

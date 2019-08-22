@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="box">
+    <div class="left">
+        <div>1
+
+        </div>
+        <div>2
+
+        </div>
+        <div>3
+
+        </div>
+        <div>4
+
+        </div>
+        <div>5
+
+        </div>
+        <div>6
+
+        </div>
+        <div>7
+
+        </div>
+        <div>8
+
+        </div>
+
+    </div>
+    <div class="right"></div>
+</div>
+
+
+<style>
+    div{
+        box-sizing: border-box;
+    }
+    .box{
+        width: 600px;
+        height: 300px;
+        border: 1px solid #000;
+        display: flex;
+    }
+    .right{
+        width: 100px;
+        height: 300px;
+        border: 1px solid #000;
+    }
+    .left{
+        flex-grow: 1;
+        border: 1px solid #000;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-content: space-evenly;
+    }
+    .left>div{
+        width: 110px;
+        height: 130px;
+        background-color: red;
+    }
+
+</style>
+</body>
+</html>

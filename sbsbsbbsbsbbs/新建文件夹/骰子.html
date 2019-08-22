@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Title</title>
+	</head>
+	<body>
+		<!-- <div class="aaa"> -->
+		<div class="box1">
+			<div>
+				<div></div>
+			</div>
+			<div>
+				<div></div>
+			</div>
+			<div>
+				<div></div>
+			</div>
+			<div>
+				<div></div>
+			</div>
+			<div>
+				<div></div>
+			</div>
+			<div>
+				<div></div>
+			</div>
+		</div>
+		<br>
+		<div class="box2">
+			<div></div>
+		</div>
+		<br>
+		<div class="box3">
+			<div>
+				<div></div>
+			</div>
+			<div>
+				<div></div>
+			</div>
+		</div>
+		<br>
+		<div class="box4">
+			<div>
+				<div></div>
+			</div>
+			<div>
+				<div></div>
+			</div>
+			<div>
+				<div></div>
+			</div>
+		</div>
+		<br>
+		<div class="box5">
+			<div>
+				<div></div>
+			</div>
+			<div>
+				<div></div>
+			</div>
+			<div>
+				<div></div>
+			</div>
+			<div>
+				<div></div>
+			</div>
+		</div>
+		<br>
+		<div class="box6">
+			<div>
+				<div></div>
+			</div>
+			<div>
+				<div></div>
+			</div>
+			<div>
+				<div></div>
+			</div>
+			<div>
+				<div></div>
+			</div>
+			<div>
+				<div></div>
+			</div>
+		</div>
+		<!-- </div> -->
+		<style>
+			.box1 {
+				width: 300px;
+				height: 300px;
+				border: 2px solid #000;
+				border-radius: 50px;
+				display: flex;
+				flex-wrap: wrap;
+				align-content: space-evenly;
+			}
+
+			.box1>div {
+				width: 150px;
+				height: 50px;
+				display: flex;
+				justify-content: center;
+			}
+
+			.box1>div>div {
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				background-color: red;
+			}
+
+			.box2 {
+				width: 300px;
+				height: 300px;
+				border: 2px solid #000;
+				border-radius: 50px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.box2>div {
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				background-color: red;
+			}
+
+			.box3 {
+				width: 300px;
+				height: 300px;
+				border: 2px solid #000;
+				border-radius: 50px;
+				display: flex;
+				justify-content: space-around;
+			}
+
+			.box3>div {
+				display: flex;
+				align-items: center;
+			}
+
+			.box3>div>div {
+				width: 50px;
+				height: 50px;
+				background-color: red;
+				border-radius: 50%;
+			}
+
+			.box4 {
+				width: 300px;
+				height: 300px;
+				border: 2px solid #000;
+				border-radius: 50px;
+				display: flex;
+				justify-content: space-around;
+			}
+
+			.box4>div:nth-child(1) {
+				display: flex;
+				align-items: flex-start;
+				position: relative;
+				top: 40px;
+				left: 18px;
+			}
+
+			.box4>div:nth-child(2) {
+				display: flex;
+				align-items: center;
+			}
+
+			.box4>div:nth-child(3) {
+				display: flex;
+				align-items: flex-end;
+				position: relative;
+				top: -40px;
+				left: -18px;
+			}
+
+			.box4>div>div {
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				background-color: red;
+			}
+
+			.box5 {
+				width: 300px;
+				height: 300px;
+				border: 2px solid #000;
+				border-radius: 50px;
+				display: flex;
+				flex-wrap: wrap;
+				align-content: space-evenly;
+			}
+
+			.box5>div {
+				width: 150px;
+				height: 50px;
+				display: flex;
+				justify-content: center;
+			}
+
+			.box5>div>div {
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				background-color: red;
+			}
+
+			.box6 {
+				width: 300px;
+				height: 300px;
+				border: 2px solid #000;
+				border-radius: 50px;
+				display: flex;
+				flex-wrap: wrap;
+				align-content: space-evenly;
+				/*justify-content: center;*/
+			}
+
+			.box6>div {
+				width: 150px;
+				height: 50px;
+				display: flex;
+				justify-content: center;
+				/*align-content: space-evenly;*/
+			}
+
+			.box6>div:nth-child(3) {
+				width: 300px;
+				display: flex;
+				justify-content: center;
+				align-content: center;
+			}
+
+			.box6>div>div {
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				background-color: red;
+			}
+
+			/* 			.aaa {
+				width: 100%;
+				height: 500px;
+				border: 2px solid #000;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-around;
+				align-content: space-around;
+			} */
+			body {
+				display: flex;
+				flex-wrap: wrap;
+			}
+		</style>
+</html>

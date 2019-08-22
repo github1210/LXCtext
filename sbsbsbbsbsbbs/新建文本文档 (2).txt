@@ -1,0 +1,185 @@
+margin: 0;/*外边距*/
+padding: 0;/*内边距*/
+background-color: rgba(15,15,15,0.5); 背景透明度 前三个值为色域
+opacity:0~1 透明度
+float: left; 左浮动 竖排变横排
+overflow:hidden 溢出隐藏
+display: none;/*隐藏 不保留物理空间*/
+visibility: hidden;/*隐藏 保留物理空间*/
+border 边框属性
+border-radius 圆角化
+box-shadow 阴影 值1阴影水平位移 值2阴影垂直位移 值3阴影模糊值 值4阴影外延值 值五颜色值
+*{/**通配选择符 匹配到页面内所有元素**/
+        margin: 0;
+        padding: 0;
+        /*边距重置*/
+  }
+div{/*元素选择器 匹配到页面内所有div*/}
+ID{/*id选择器 id唯一*/}
+.ppp>div{/*子选择符 匹配到子一代元素*/}
+.ppp div{/*包含选择符 匹配到被包含的元素*/}
+.ppp+div{/*相邻选择符 匹配到紧挨着的元素是不是div*/}
+.ppp~div{/*兄弟选择符 匹配到之后的所有元素*/}
+【】{/*属性选择器*/}
+<div style............ 内联样式.....
+<style>
+内嵌样式
+</style>
+！important 强制样式 无敌！！！
+样式优先级：
+！important > 内联样式>内嵌样式 > 外部引用样式
+<style>
+！important > id选择器 > 类选择器 > 元素选择器 > 继承样式 > 通配选择符 > 浏览器默认样式
+</style>（越精确优先级越高）
+first-child（）/*匹配到第一个元素是不是div,如果是就匹配到否则匹配不到*/
+last-child（）/*匹配到第几个元素是不是div,如果是就匹配到否则匹配不到*/
+nth-child（）/*匹配到最后一个元素是不是div,如果是就匹配到否则匹配不到*/
+nth-last-child（）/*匹配到倒数第几个元素是不是div，如果是就匹配到否则匹配不到*/
+first-of-type（）/*匹配到div这种类型的第一个*/
+last-of-type（）/*匹配到div这种类型的最后一个*/
+nth-of-type（）/*匹配到div这种类型的顺数第几个*/
+nth-last-of-type（）/*匹配到div这种类型的倒数第几个*/
+
+定位
+position:fixed/*参照窗口定位（浏览器左上顶点）脱离文档流*/
+position:relative/*相对定位，相对自身位置的移动*/
+position:absolute/*绝对定位，脱离文档流，逐层逐层往外找，找到父辈容器中position值不是默认值的父辈容器进行参照定位，
+如果找不到就以浏览器左上顶点（body）进行参照定位*/
+left bottom
+
+背景图
+background-image:url/*引入背景图*/
+background-repeat:no-repeat/*背景图不平铺*/
+background-size:/*设置背景图尺寸*/
+background-clip:content-box/*背景图裁剪区域*/
+background-position/*背景图定位*/
+background-color/*背景颜色*/
+background:url("") no-repeat 0 0;/*背景语法糖*/
+background:linear-gradient(to right,red,hotpink);/*线性渐变*/
+background:radial-gradient/*径向渐变*/
+margin:auto/*水平居中*/
+box-sizing:content-box/*content-box标准盒子*/
+border-box/*怪异盒子*/
+
+.box:hover/*鼠标悬停在元素上的样式变换*/
+.box:active/*鼠标按压不放时发生的样式变换*/
+
+裁剪
+clip-path: inset();/*矩形裁剪*/
+clip-path: circle();/*圆形裁剪*/
+clip-path: ellipse();/*椭圆形裁剪*/
+clip-path: polygon();/*多边形裁剪 坐标点的依次连接形成的闭合路径*/
+        clip-path: ellipse();/*椭圆形裁剪*/
+
+iconfont图标使用方法
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1243319_w0g5gqrbig.css">
+<i class="iconfont icon-youxiandianshi"></i>
+
+input
+autofocus 自动获取焦点，出现光标，用户可以直接输入信息
+placeholder 提示信息
+::-webkit-input-placeholder 更改提示信息的颜色
+br 换行   hr分割线
+<input type="text" class="aa" placeholder="提示信息" value="默认值" autofocus> <br>
+
+<hr>
+
+密码：<input type="text" type="password">
+
+禁用：<input type="text" disabled value="禁用">
+
+只读：<input type="text" readonly value="这里是只读的内容">
+
+搜索：<input type="search">
+
+日期：<input type="date">
+
+数据列表：<input list="foodlist">
+    <datalist id="foodlist">
+        <option value="苹果">苹果</option>
+    </datalist>
+
+输入控件长度：<input type="text" maxlength="8"><!--最大长度8个汉字或者英文-->
+
+颜色：<input type="color">
+邮箱：<input type="email">
+手机：<input type="tel">
+连接：<input type="url">
+上传文件：<input type="file">
+数字：<input type="number">
+<br>
+<input type="range">
+复选框 爱好：
+<label for="basketball">篮球:</label>
+<input type="checkbox" id="basketball">
+<label for="football">足球:</label>
+<input type="checkbox" id="football">
+<label for="vball">排球:</label>
+<input type="checkbox" id="vball">
+
+单选框 性别：
+男：<input type="radio" name="sex" checked>
+<!--checked 页面加载完成时的选择-->
+女：<input type="radio" name="sex">
+按钮：<input type="button" value="这是普通的按钮">
+提交：<input type="submit" value="登录">
+重置：<input type="reset" value="重置">
+
+<button disabled>禁用按钮</button>
+<button type="reset">重置</button>
+<button type="submit">提交按钮</button>
+<button type="button">普通按钮</button>
+
+<select name="" id="">
+    <option value="">南宁</option>
+    <option value="">柳州</option>
+    <option value="">桂林</option>
+</select>
+
+<select name="" id="">
+    <optgroup label="广西">
+        <option value="北海">北海</option>
+        <option value="柳州">柳州</option>
+        <option value="百色">百色</option>
+        <option value="田阳">田阳</option>
+        <option value="田东">田东</option>
+    </optgroup>
+    <optgroup label="广州">
+        <option value="潮汕">潮汕</option>
+        <option value="珠海">珠海</option>
+        <option value="深圳">深圳</option>
+        <option value="潮州">潮州</option>
+        <option value="汕头">汕头</option>
+    </optgroup>
+
+    <textarea name="" id="" cols="30" rows="10">
+        文本框
+        富文本编辑器
+    </textarea>
+</select>
+
+
+
+transition: 2s;/*过度*/
+transform: translateX(50px);/*水平方向平移*/
+transform: translateY(50px);/*垂直方向平移*/
+transform: translate(100px,50px);/*水平方向平移*/
+transform: scaleX(5);/*水平方向缩放*/
+transform: scaleY(5);/*垂直方向缩放*/
+transform: scale(5);/*整体方向缩放 字体大小最小是12px 小于12px时只有缩放能实现*/
+transform: rotateX(240deg);/*绕着X轴旋转*/
+transform: rotateY(240deg);/*绕着Y轴旋转*/
+transform-origin: 0 0;/*更改旋转基点 默认50% 50%*/
+transform: rotate(360deg);/*绕着几何中心旋转*/
+
+animation: dd 10s 0.5s linear alternate infinite;
+        /*animation-name: dd;!*动画名称*!*/
+        /*animation-duration: 10s;!*动画持续时间*!*/
+        /*animation-delay: 0.5s;!*动画延时*!*/
+        /*animation-timing-function: linear;!*动画的过渡方式*!*/
+        /*animation-direction: alternate;!*定义动画是否交替运行*!*/
+        /*animation-iteration-count: infinite;!*动画的循环 默认一次 infinite无限循环*!*/
+
+
+<div class="aa" id="biu">
+<a href="#biu">回到顶部</a><!--锚点导航-->

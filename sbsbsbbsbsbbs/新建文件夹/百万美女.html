@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="box">
+        <div></div>
+        <div>魔力唇彩<hr>迪奥哑光#999完美质感震撼来袭性感小姐姐在线磨人</div>
+        <div></div>
+    </div>
+</body>
+<style>
+    .box{
+        width: 300px;
+        height: 300px;
+        border: 1px solid darkgrey;
+        border-radius: 50px;
+        margin: auto;
+        margin-top: 20%;
+        background: url("1/image/m1.jpg") no-repeat 50% 50%;
+        background-size: cover;
+        position: relative;
+        overflow: hidden;
+    }
+    .box>div:nth-child(2){
+        width: 200px;
+        height: 1px;
+        background-color: darkgrey;
+        opacity: 0;
+        position: absolute;
+        top: 16%;
+        left: 16%;
+        transform-origin: 100% 50%;
+        transform: rotate(-75deg);
+    }
+    .box>div{
+        font-size: 20px;
+        flood-color: black;
+        text-align: center;
+        opacity: 1;
+    }
+    .box:hover>div:nth-child(2){
+        opacity: 0.5;
+    }
+    .box>div:nth-child(1){
+        width: 300px;
+        height: 300px;
+        background-color: darkorchid;
+        opacity: 0;
+        position: absolute;
+        top: -90%;
+        left: -90%;
+        transform: rotate(45deg);
+    }
+    .box>div:nth-child(3){
+        width: 300px;
+        height: 300px;
+        background-color: darkorchid;
+        opacity: 0;
+        position: absolute;
+        top: 90%;
+        left: 90%;
+        transform: rotate(45deg);
+    }
+    .box:hover>div:nth-child(1){
+        position: absolute;
+        top: -20%;
+        left: -20%;
+        transition: 3s;
+        opacity: 0.2;
+    }
+    .box:hover>div:nth-child(3){
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        transition: 3s;
+        opacity: 0.2;
+    }
+    .box:hover>div:nth-child(2){
+        width: 200px;
+        height: 150px;
+        position: absolute;
+        top: 16%;
+        left: 16%;
+        transition: 3s;
+        opacity: 0.7;
+        transform: rotate(0deg);
+    }
+</style>
+</html>

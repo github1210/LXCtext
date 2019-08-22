@@ -1,0 +1,153 @@
+js脚本语言 弱类型
+
+a=0 整数整形
+a="sdaadasf"字符串
+a="true" 布尔型
+a=new Date()日期
+a=new Date().getTime();计算机时间单位，毫秒
+console.info()执行语句
+object 一个东西
+=赋值 ==判断是否相等只判断单纯数字不判断类型 ===判断数值是否相等再判断数据类型是否相等
+
+没有VAR修饰的变量，会被系统认为是一个全局变量
+
+//isNaN函数，全称是 is not a nuber()参数不是一个数字？
+
+作业：查阅Math函数的API
+写一句代码，取30~100之间的随机数
+Math.floor(Math.random()*3+3)向下取整，前一个值是取几个数，后一个值是从几开始取
+
+indexof //字符串常用的一个API
+var arr = ['zhang','li','liu','yang','fang'];arr.length
+arr['zeng']='zengxiaoxian';
+console.info(arr);
+
+for...in遍历对象
+for( var x arr){console.info(arr[x])}
+
+var a = ['a','b','c','d'];
+var student = {};//对象的声明
+键值对 key-vaue 结构
+json对象 描述对象的格式，从文本上看，他与对象的结构没有任何区别
+student.hasOwProperty("age")和 in 操作一样，作为容错的重要手段
+
+if ("name" in student){console.info("存在")}
+if (student.hasOwnProperty("name")){console.info("存在")}
+//1.对象的属性，也可以是对象 2.对象的属性，也可以是函数（方法）
+
+	//立即执行函数（）（）;//第一个函数,表示要执行的函数,
+	//放函数体,可以是匿名的函数,第二个括号,放参数列表
+	(function( a )){
+		alert(a);//阻塞,如果没人点击确定,后面的代码不会执行
+		console.info("22222222222");
+		b = {a:1};
+		return b;
+	})("333333333333333",4444);
+
+/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			
+		</style>
+	</head>
+	<body>
+		电子时钟：
+		<div class="clock" id="now">
+			2019年6月
+		</div>
+	</body>
+</html>
+<script>
+	// function foo( a ){
+	// 	alert(a);
+	// 	console.info("222222222");
+	// }
+	// foo("hello");
+	// //立即执行函数（）（）;//第一个函数,表示要执行的函数,
+	// //放函数体,可以是匿名的函数,第二个括号,放参数列表
+	// (function( a )){
+	// 	alert(a);//阻塞,如果没人点击确定,后面的代码不会执行
+	// 	console.info("22222222222");
+	// 	b = {a:1};
+	// 	return b;
+	// })("333333333333333",4444);
+	
+	//****** 定时器 setInterval();是一个函数!他接受两个参数,参数一(一个函数体要做的事情)
+	//参数2 int值,表示毫秒,即间隔多少毫秒,去执行一次参数一函数
+	var timer032 = setInterval(function(){
+		var now = new Date();
+		// var year = now.getFullYear();
+		// var month = now.getMonth();
+		// var date = now.getDate();
+		// console.info( year +"年" + month +"月" + date + "日" );
+		console.info(now.toLocaleString());
+		document.getElementById("now").innerText = now.toLocaleString();
+	},1000);
+
+/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/
+
+
+a[ a.length] = 345;放变量 数宿主最后追加变量
+a.push(4);追加补充
+a.pop（）；删除
+a.splice(1,0,"leon","tomi");找到1的位置 添加两个元素 之后删除两个元素
+a1 = a3.concat(a1) 数组拼接
+
+对象构造函数
+
+var counter = 1;
+var luckyNum = "25";
+var tempRan = 0;
+while( tempRan != luckyNum){
+	tempRan = Math.floor(Math.random()*100);
+	console.info(tempRan + "--------" + counter ++);
+};
+
+
+
+var arr1 = [1,2,3,4,7,9,56,77,63,44,59,77,81,97,3];
+var arr2 = [];
+arr2.push(arr1[0]);
+for(var i=0 ; i < arr1.length; i++){
+	for(var j=0; j < arr2.length; j++){
+		if( arr2[j] == arr1[i]){
+			break;
+		}
+		if( j== arr2.length-1){
+			arr2.push(arr1[i]);
+		}
+	}
+}
+console.info(arr2);
+
+
+
+
+var arr1 = [1,2,3,4,7,9,56,77,63,44,59,77,81,97,3];
+function match01( arr1 ){
+	var arr2 = [];
+	arr2.push(arr1[0]);
+	for(var i=0 ; i < arr1.length; i++){
+		
+	for(var j=0; j < arr2.length; j++){
+		if( arr2[j] == arr1[i]){
+			break;
+		}
+		if( j== arr2.length-1){
+			arr2.push(arr1[i]);
+		}
+	}
+}
+ return arr2;
+}
+
+
+aa.sort();从大到小排列
+aa.reverse();翻转函数排列
+aa.sort( function(a,b){return a - b}); //只适用于数字
+alert(1);审查

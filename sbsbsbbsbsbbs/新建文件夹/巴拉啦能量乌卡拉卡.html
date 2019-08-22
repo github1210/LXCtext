@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="box">
+        <div>
+            <div></div>
+        </div>
+        <div>
+            <div></div>
+        </div>
+    </div>
+</body>
+<style>
+    .box{
+        width: 1895px;
+        height: 950px;
+        background-color: #FBB73A;
+    }
+    .box>div:nth-child(1){
+        width: 150px;
+        height: 150px;
+        border: 8px solid #FFF2ED;
+        border-radius: 50%;
+        position: relative;
+        top: 30%;
+        left: 30%;
+        animation: aa 1s 1s linear infinite;
+        transform: rotate(0deg);
+    }
+    .box>div:nth-child(1)>div{
+        width: 100px;
+        height: 50px;
+        background-color: #FBB73A;
+        position: relative;
+        top: -20%;
+        left: 15%;
+    }
+    .box>div:nth-child(2){
+        width: 90px;
+        height: 90px;
+        border: 8px solid #FFF2ED;
+        border-radius: 50%;
+        position: relative;
+        top: 148px;
+        left: 597px;
+        animation: bb 1s 1s linear infinite;
+        transform: rotate(0deg);
+    }
+    .box>div:nth-child(2)>div{
+        width: 50px;
+        height: 25px;
+        background-color: #FBB73A;
+        position: relative;
+        top: -8px;
+        left: 15px;
+    }
+    @keyframes aa {
+        0%{
+            transform: rotate(0deg);
+            opacity: 0.8;
+        }
+        50%{
+            transform: rotate(180deg);
+            opacity: 0.4;
+        }
+        100%{
+            transform: rotate(360deg);
+            opacity: 0.8;
+        }
+    }
+    @keyframes bb{
+        0% {
+            transform: rotate(0deg);
+            opacity: 0.8;
+        }
+        50% {
+            transform: rotate(-180deg);
+            opacity: 0.4;
+        }
+        100% {
+            transform: rotate(-360deg);
+            opacity: 0.8;
+        }
+    }
+</style>
+</html>

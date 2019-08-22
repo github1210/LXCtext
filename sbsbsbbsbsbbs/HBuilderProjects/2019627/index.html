@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	</head>
+	<body>
+		2019627
+	</body>
+</html>
+<script type="text/javascript">
+	function Student(name, grade, id, classIn, house, total) {
+		this.name = name;
+		this.grade = grade;
+		this.id = id;
+		this.classIn = classIn;
+		this.house = house;
+		this.total = total;
+	}
+	var student01 = new Student("lxc", "D4", 2233223, "2", "20#111", 0);
+
+
+	var counter = 1;
+	var luckyNum = "25";
+	var tempRan = 0;
+	while (tempRan != luckyNum) {
+		tempRan = Math.floor(Math.random() * 100);
+		console.info(tempRan + "--------" + counter++);
+	};
+
+
+	var ran001 = Math.floor(Math.random() * 5);
+	swith(ran001) {
+		case: {
+
+			break;
+		}
+	}
+
+	var arr1 = [1, 2, 3, 4, 7, 9, 56, 77, 63, 44, 59, 77, 81, 97, 3];
+
+	function match01(arr1) {
+		var arr2 = [];
+		arr2.push(arr1[0]);
+		for (var i = 0; i < arr1.length; i++) {
+
+			for (var j = 0; j < arr2.length; j++) {
+				if (arr2[j] == arr1[i]) {
+					break;
+				}
+				if (j == arr2.length - 1) {
+					arr2.push(arr1[i]);
+				}
+			}
+		}
+		return arr2;
+	}
+
+	function lll2(a, b) {
+		if (isNaN(a)) {
+			console.info(a + "不是数字");
+			return;
+
+		}
+		if (isNaN(b)) {
+			console.info(a + "不是数字");
+			return;
+		}
+		return a > b ? a : b;
+	}
+
+	var name = "";
+	var userName = name || '匿名用户';
+	console.info(userName);
+	name = "lxc";
+	userName = name || '匿名用户';
+	console.info(userName);
+
+	function x(string, array1) {
+		for (var i = 0; i < array1.length; i++) {
+			if (string == array1[i]) {
+				return i;
+			}
+		}
+		return "no-match";
+	}
+	var str = "bbb";
+	var ourClass = ["aaa","bbb","ccc","ddd"];
+	var resulf = x(str,ourClass);
+	console.info(resulf);
+	
+	function getRan( a,b ){
+		return Math.floor(Math.random()*(b-a+1) + a);
+	}
+	console.info(getRan(5,3));
+	
+	var a1=["tomy","peter","wang","zhao"];
+	var a2=[];
+	var a3=[];
+	function x(a1,a2){
+		for(var i = 0; i < a1.length; i++){
+			for(var j = 0; j < a1.length-i; j++){
+			a2=a1[i];
+			a3=a1[j];
+			if(i!=j){
+				a1.splice(i,1,a2);
+				a1.splice(j,1,a3);
+			}
+			console.info(a1);
+		}
+	
+	}
+}
+</script>

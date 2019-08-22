@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+
+	</body>
+</html>
+<script type="text/javascript">
+	var a = [3, 5, 7, 8, 9, 33, 44, 55];
+	for (var i = 0; i < a.length - 1; i++) {
+		for (var j = 0; j < a.length - 1 - i; j++) {
+			if (a[j] > a[j + 1]) {
+				var temp = a[j];
+				a[j] = a[j + 1];
+				a[j + 1] = temp;
+			}
+		}
+	}
+
+	function Student(name, total) {
+		this.name = name;
+		this.total = total;
+	}
+	var students = [];
+	students.push(new Student("李", 88));
+	students.push(new Student("刘", 70));
+	students.push(new Student("孙", 23));
+	students.push(new Student("方", 58));
+	students.push(new Student("张", 60));
+	students.push(new Student("胡", 63));
+
+	for (var i = 0; i < students.length - 1; i++) {
+		for (var j = 0; j < students.length - 1 - i; j++) {
+			if (students[j].total < students[j + 1].total) {
+				var temp = students[j];
+				students[j] = students[j + 1];
+				students[j + 1] = temp;
+			}
+		}
+	}
+
+	for (var m = 0; m < students.length - 1; m++) {
+		students[m].index = m + 1
+	}
+	console.info(students)
+
+	function dy(nameString) {
+		
+		if(!nameString){
+			console.info("请输入参数");
+			return;
+		}
+		for (var i = 0; i < students.length; i++) {
+			if (nameString == students[i].name) {
+				return students[i].index;
+			}
+		}
+		return "查无此人";
+	}
+</script>
